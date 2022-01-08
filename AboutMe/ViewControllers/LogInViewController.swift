@@ -15,8 +15,7 @@ class LogInViewController: UIViewController {
     @IBOutlet private var logInButton: UIButton!
 
     //MARK: - Private Properties
-    private let userName = "User"
-    private let password = "Password"
+    private let user = User.getUser()
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
@@ -30,7 +29,7 @@ class LogInViewController: UIViewController {
 
     //MARK: - Navigation
     override func shouldPerformSegue(withIdentifier _: String, sender _: Any?) -> Bool {
-        if userNameTF.text != userName || passwordTF.text != password {
+        if userNameTF.text != user.userName || passwordTF.text != user.password {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password"
@@ -46,7 +45,7 @@ class LogInViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text ?? ""
+        welcomeVC.user = user
     }
 
     //MARK: - IB Actions
@@ -61,11 +60,11 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func forgotUserNameButtonPressed() {
-        showAlert(title: "Oops!", message: "Your name is \(userName) 😉")
+        showAlert(title: "Oops!", message: "Your name is \(user.userName) 😉")
     }
 
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(title: "Oops!", message: "Your password is \(password) 😉")
+        showAlert(title: "Oops!", message: "Your password is \(user.password) 😉")
     }
 
     @IBAction func unwind(for _: UIStoryboardSegue) {

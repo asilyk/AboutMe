@@ -12,12 +12,14 @@ class WelcomeViewController: UIViewController {
     @IBOutlet private var welcomeLabel: UILabel!
 
     //MARK: - Public Properties
-    var userName = ""
+    var user: User?
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        welcomeLabel.text = "Welcome, \(userName)\n👋"
+        if let user = user {
+            welcomeLabel.text = "Welcome, \(user.person.name) \(user.person.surname)\n👋"
+        }
     }
 }
