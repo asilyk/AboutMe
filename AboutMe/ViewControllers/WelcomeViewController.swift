@@ -19,7 +19,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
         if let user = user {
-            welcomeLabel.text = "Welcome, \(user.person.name) \(user.person.surname)\n👋"
+            welcomeLabel.text = "Welcome,\n \(user.person.name) \(user.person.surname)\n👋"
         }
     }
 }
