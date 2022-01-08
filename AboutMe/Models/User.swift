@@ -21,8 +21,13 @@ struct User {
 }
 
 struct Person {
+    let image: String
+
     let name: String
     let surname: String
+
+    let country: String
+    let city: String
 
     let age: UInt
 
@@ -30,8 +35,11 @@ struct Person {
 
     static func getPerson() -> Person {
         Person(
+            image: "me",
             name: "Aleksandr",
             surname: "Ilyk",
+            country: "Russia",
+            city: "Moscow",
             age: 20,
             pets: [
                 Pet(name: "Pirog", animal: .dog),
