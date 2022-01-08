@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  AboutMe
+//  LoginApp
 //
-//  Created by Alexander on 08.01.2022.
+//  Created by Alexander on 06.01.2022.
 //
 
 import UIKit
