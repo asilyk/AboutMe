@@ -197,14 +197,27 @@
                     <view key="view" contentMode="scaleToFill" id="krS-ax-Kue">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jl2-dY-EOL">
+                                <rect key="frame" x="61" y="288.5" width="292" height="318.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jl2-dY-EOL" secondAttribute="height" multiplier="146:159" id="cDW-fo-LAb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MO9-9i-VXC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jl2-dY-EOL" firstAttribute="centerX" secondItem="krS-ax-Kue" secondAttribute="centerX" id="CU9-jh-a0z"/>
+                            <constraint firstItem="jl2-dY-EOL" firstAttribute="width" secondItem="krS-ax-Kue" secondAttribute="width" multiplier="0.705314" id="pl0-4Q-2dp"/>
+                            <constraint firstItem="jl2-dY-EOL" firstAttribute="centerY" secondItem="krS-ax-Kue" secondAttribute="centerY" id="qDa-nr-n2Y"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="1Pa-K2-jKg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkE-ke-wmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4177" y="794"/>
+            <point key="canvasLocation" x="4176.811594202899" y="793.52678571428567"/>
         </scene>
         <!--More info-->
         <scene sceneID="xQ6-tH-8WN">
@@ -348,6 +361,7 @@
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="gearshape.2.fill" catalog="system" width="128" height="100"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>

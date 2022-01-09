@@ -13,8 +13,8 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var meImageView: UIImageView!
     @IBOutlet var buttonsStackView: UIStackView!
 
-    //MARK: - Private Properties
-    private var user: User!
+    //MARK: - Public Properties
+    var user: User!
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
