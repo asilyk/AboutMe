@@ -271,18 +271,63 @@
         <!--My pets-->
         <scene sceneID="bAA-yR-9Jn">
             <objects>
-                <viewController id="d08-V6-rMY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1cO-3e-qUV">
+                <viewController id="d08-V6-rMY" customClass="MyPetsViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1cO-3e-qUV" customClass="MyPets">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="4cs-5Q-kEF">
+                                <rect key="frame" x="142" y="201.5" width="130" height="493"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SNZ-5x-4dc">
+                                        <rect key="frame" x="0.0" y="1.5" width="130" height="121"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="W8O-aj-PQ9"/>
+                                            <constraint firstAttribute="height" constant="123.5" id="n3b-71-Tyg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqX-zN-wwe">
+                                        <rect key="frame" x="24" y="177.5" width="82.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AgP-dc-Iiq">
+                                        <rect key="frame" x="0.0" y="275" width="130" height="121"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="123.5" id="Fa3-oK-sTx"/>
+                                            <constraint firstAttribute="width" constant="130" id="wLJ-vj-poB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh3-bt-IXy">
+                                        <rect key="frame" x="24" y="451" width="82.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NYg-Hp-pgy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NYg-Hp-pgy" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4cs-5Q-kEF" secondAttribute="bottom" constant="16" id="4zm-et-ovX"/>
+                            <constraint firstItem="4cs-5Q-kEF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NYg-Hp-pgy" secondAttribute="top" constant="16" id="AXt-i6-Zel"/>
+                            <constraint firstItem="4cs-5Q-kEF" firstAttribute="centerY" secondItem="1cO-3e-qUV" secondAttribute="centerY" id="Fgm-dr-nhr"/>
+                            <constraint firstItem="4cs-5Q-kEF" firstAttribute="centerX" secondItem="1cO-3e-qUV" secondAttribute="centerX" id="Qff-ex-cpb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My pets" id="PDp-Xg-ccG"/>
+                    <connections>
+                        <outlet property="firstPetImageView" destination="SNZ-5x-4dc" id="Wdi-8i-1Dl"/>
+                        <outlet property="firstPetLabel" destination="dqX-zN-wwe" id="dNT-mw-74w"/>
+                        <outlet property="secondPetImageView" destination="AgP-dc-Iiq" id="pAu-bl-GOb"/>
+                        <outlet property="secondPetLabel" destination="kh3-bt-IXy" id="uTE-y1-1Et"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiX-2B-srr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5848" y="-339"/>
+            <point key="canvasLocation" x="5847.826086956522" y="-339.50892857142856"/>
         </scene>
         <!--My skills-->
         <scene sceneID="eeT-y2-FRR">

@@ -28,6 +28,8 @@ struct Person {
 
     let age: String
 
+    let hobby: String
+
     let country: String
     let city: String
 
@@ -39,6 +41,7 @@ struct Person {
             name: "Aleksandr",
             surname: "Ilyk",
             age: "20",
+            hobby: "programming",
             country: "Russia",
             city: "Moscow",
             pets: [

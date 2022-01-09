@@ -33,7 +33,7 @@ class AboutMeViewController: UIViewController {
             Hello! My name is \(user.person.name) \(user.person.surname).\n
             I'm \(user.person.age) years old. I live in \(user.person.country)
             in the city of \(user.person.city).\n
-            And I love programming.
+            And I love \(user.person.hobby).
             """
         }
     }

@@ -16,6 +16,7 @@
 		114C77A22789996C00316E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C77992789996C00316E86 /* Main.storyboard */; };
 		114C77B12789A62C00316E86 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C77A927899C5500316E86 /* User.swift */; };
 		114C77B42789B5B000316E86 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C77B32789B5B000316E86 /* AboutMeViewController.swift */; };
+		114C77C9278ACDEA00316E86 /* MyPetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C77C8278ACDEA00316E86 /* MyPetsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		114C779A2789996C00316E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		114C77A927899C5500316E86 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		114C77B32789B5B000316E86 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		114C77C8278ACDEA00316E86 /* MyPetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPetsViewController.swift; path = AboutMe/ViewControllers/MyPetsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				114C77B32789B5B000316E86 /* AboutMeViewController.swift */,
 				114C778E2789996B00316E86 /* WelcomeViewController.swift */,
 				114C778F2789996B00316E86 /* LogInViewController.swift */,
+				114C77C8278ACDEA00316E86 /* MyPetsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				114C779D2789996C00316E86 /* AppDelegate.swift in Sources */,
 				114C779C2789996C00316E86 /* LogInViewController.swift in Sources */,
 				114C779B2789996C00316E86 /* WelcomeViewController.swift in Sources */,
+				114C77C9278ACDEA00316E86 /* MyPetsViewController.swift in Sources */,
 				114C77B12789A62C00316E86 /* User.swift in Sources */,
 				114C77B42789B5B000316E86 /* AboutMeViewController.swift in Sources */,
 				114C779F2789996C00316E86 /* SceneDelegate.swift in Sources */,
