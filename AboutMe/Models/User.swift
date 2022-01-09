@@ -26,10 +26,10 @@ struct Person {
     let name: String
     let surname: String
 
+    let age: String
+
     let country: String
     let city: String
-
-    let age: UInt
 
     let pets: [Pet]
 
@@ -38,9 +38,9 @@ struct Person {
             image: "me",
             name: "Aleksandr",
             surname: "Ilyk",
+            age: "20",
             country: "Russia",
             city: "Moscow",
-            age: 20,
             pets: [
                 Pet(name: "Pirog", animal: .dog),
                 Pet(name: "Belyash", animal: .cat)

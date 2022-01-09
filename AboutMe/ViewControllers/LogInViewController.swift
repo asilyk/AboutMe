@@ -57,9 +57,6 @@ class LogInViewController: UIViewController {
                 if let aboutUserVC = navigationVC.topViewController as? AboutMeViewController {
                     aboutUserVC.user = user
                 }
-                if let settingsVC = navigationVC.topViewController as? SettingsViewController {
-                    settingsVC.user = user
-                }
             }
         }
     }

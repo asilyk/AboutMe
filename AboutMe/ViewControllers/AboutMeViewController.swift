@@ -13,21 +13,28 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var meImageView: UIImageView!
     @IBOutlet var buttonsStackView: UIStackView!
 
-    //MARK: - Public Properties
-    var user: User!
+    //MARK: - Private Properties
+    private var user: User!
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        aboutMeLabel.text = """
-        Hello! My name is \(user.person.name) \(user.person.surname).\n
-        I'm \(user.person.age) years old. I live in \(user.person.country)
-        in the city of \(user.person.city).\n
-        And I love programming.
-        """
+        updateLabel()
 
         meImageView.image = UIImage(named: "me")
         meImageView.layer.cornerRadius = meImageView.frame.height / 2
+    }
+
+    //MARK: - Private Methods
+    private func updateLabel() {
+        if let aboutMeLabel = aboutMeLabel {
+            aboutMeLabel.text = """
+            Hello! My name is \(user.person.name) \(user.person.surname).\n
+            I'm \(user.person.age) years old. I live in \(user.person.country)
+            in the city of \(user.person.city).\n
+            And I love programming.
+            """
+        }
     }
 }
