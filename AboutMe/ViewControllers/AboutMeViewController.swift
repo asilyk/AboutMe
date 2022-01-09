@@ -14,7 +14,7 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var buttonsStackView: UIStackView!
 
     //MARK: - Public Properties
-    var user: User!
+    var person: Person!
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
@@ -30,10 +30,10 @@ class AboutMeViewController: UIViewController {
     private func updateLabel() {
         if let aboutMeLabel = aboutMeLabel {
             aboutMeLabel.text = """
-            Hello! My name is \(user.person.name) \(user.person.surname).\n
-            I'm \(user.person.age) years old. I live in \(user.person.country)
-            in the city of \(user.person.city).\n
-            And I love \(user.person.hobby).
+            Hello! My name is \(person.name) \(person.surname).\n
+            I'm \(person.age) years old. I live in \(person.country)
+            in the city of \(person.city).\n
+            And I love \(person.hobby).
             """
         }
     }

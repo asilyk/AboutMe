@@ -55,7 +55,7 @@ class LogInViewController: UIViewController {
 
             if let navigationVC = viewController as? UINavigationController {
                 if let aboutUserVC = navigationVC.topViewController as? AboutMeViewController {
-                    aboutUserVC.user = user
+                    aboutUserVC.person = user.person
                 }
             }
         }
