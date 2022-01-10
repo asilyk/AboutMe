@@ -25,6 +25,13 @@ class AboutMeViewController: UIViewController {
         meImageView.image = UIImage(named: "me")
         meImageView.layer.cornerRadius = meImageView.frame.height / 2
     }
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        if let moreInfoVC = segue.destination as? MoreInfoViewController {
+            moreInfoVC.person = person
+        }
+    }
 
     //MARK: - Private Methods
     private func updateLabel() {

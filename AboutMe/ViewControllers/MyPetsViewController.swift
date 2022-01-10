@@ -14,15 +14,20 @@ class MyPetsViewController: UIViewController {
 
     @IBOutlet var secondPetImageView: UIImageView!
     @IBOutlet var secondPetLabel: UILabel!
+    
+    //MARK: - Public Properties
+    var pets: [Pet] = []
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        firstPetImageView.image = UIImage(named: "cat")
+        firstPetImageView.image = UIImage(named: "dog")
         firstPetImageView.layer.cornerRadius = firstPetImageView.frame.height / 2
+        firstPetLabel.text = "My \(pets.first?.animal.rawValue ?? "") is named \(pets.first?.name ?? "")."
         
-        secondPetImageView.image = UIImage(named: "dog")
+        secondPetImageView.image = UIImage(named: "cat")
         secondPetImageView.layer.cornerRadius = secondPetImageView.frame.height / 2
+        secondPetLabel.text = "My \(pets.last?.animal.rawValue ?? "") is named \(pets.last?.name ?? "")."
     }
 }

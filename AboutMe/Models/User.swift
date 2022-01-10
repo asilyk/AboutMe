@@ -53,9 +53,9 @@ struct Person {
 }
 
 struct Pet {
-    enum Animal {
-        case dog
-        case cat
+    enum Animal: String {
+        case dog = "dog"
+        case cat = "cat"
     }
 
     let name: String
