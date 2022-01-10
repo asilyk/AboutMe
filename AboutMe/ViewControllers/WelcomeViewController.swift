@@ -19,6 +19,11 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        updateLabel()
+    }
+
+    //MARK: - Private Methods
+    private func updateLabel() {
         welcomeLabel.text = "Welcome,\n \(personName) \(personSurname)\n👋"
     }
 }
