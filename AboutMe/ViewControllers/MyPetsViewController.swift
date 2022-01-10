@@ -22,12 +22,12 @@ class MyPetsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupOutlets(pet: pets.first, imageView: firstPetImageView, label: firstPetLabel)
-        setupOutlets(pet: pets.last, imageView: lastPetImageView, label: lastPetLabel)
+        setupOutlets(for: pets.first, image: firstPetImageView, label: firstPetLabel)
+        setupOutlets(for: pets.last, image: lastPetImageView, label: lastPetLabel)
     }
 
     //MARK: - Private Methods
-    private func setupOutlets(pet: Pet?, imageView: UIImageView, label: UILabel) {
+    private func setupOutlets(for pet: Pet?, image imageView: UIImageView, label: UILabel) {
         guard let pet = pet else { return }
 
         imageView.image = pet.image

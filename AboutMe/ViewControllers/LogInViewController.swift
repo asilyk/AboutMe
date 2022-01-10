@@ -62,7 +62,7 @@ class LogInViewController: UIViewController {
     @IBAction func valueOfTFChanged() {
         guard let userName = userNameTF.text else { return }
         guard let password = passwordTF.text else { return }
-        
+
         if !userName.isEmpty, !password.isEmpty {
             logInButton.isEnabled = true
         } else {
