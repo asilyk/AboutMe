@@ -21,10 +21,7 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userNameTF.delegate = self
-        passwordTF.delegate = self
-
-        logInButton.isEnabled = false
+        setupLogInOutlets()
     }
 
     //MARK: - Navigation
@@ -63,12 +60,13 @@ class LogInViewController: UIViewController {
 
     //MARK: - IB Actions
     @IBAction func valueOfTFChanged() {
-        if let userName = userNameTF.text, let password = passwordTF.text {
-            if !userName.isEmpty, !password.isEmpty {
-                logInButton.isEnabled = true
-            } else {
-                logInButton.isEnabled = false
-            }
+        guard let userName = userNameTF.text else { return }
+        guard let password = passwordTF.text else { return }
+        
+        if !userName.isEmpty, !password.isEmpty {
+            logInButton.isEnabled = true
+        } else {
+            logInButton.isEnabled = false
         }
     }
 
@@ -88,8 +86,16 @@ class LogInViewController: UIViewController {
     }
 
     //MARK: - Private Methods
+    private func setupLogInOutlets() {
+        userNameTF.delegate = self
+        passwordTF.delegate = self
+
+        logInButton.isEnabled = false
+    }
+
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
@@ -99,6 +105,7 @@ class LogInViewController: UIViewController {
 extension LogInViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+
         view.endEditing(true)
     }
 
@@ -109,6 +116,7 @@ extension LogInViewController: UITextFieldDelegate {
             view.endEditing(true)
             logInButton.sendActions(for: .touchUpInside)
         }
+
         return true
     }
 }
