@@ -332,8 +332,8 @@
                     <connections>
                         <outlet property="firstPetImageView" destination="SNZ-5x-4dc" id="Wdi-8i-1Dl"/>
                         <outlet property="firstPetLabel" destination="dqX-zN-wwe" id="dNT-mw-74w"/>
-                        <outlet property="secondPetImageView" destination="AgP-dc-Iiq" id="pAu-bl-GOb"/>
-                        <outlet property="secondPetLabel" destination="kh3-bt-IXy" id="uTE-y1-1Et"/>
+                        <outlet property="lastPetImageView" destination="AgP-dc-Iiq" id="pAu-bl-GOb"/>
+                        <outlet property="lastPetLabel" destination="kh3-bt-IXy" id="uTE-y1-1Et"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiX-2B-srr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
