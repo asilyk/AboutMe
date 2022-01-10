@@ -9,12 +9,11 @@ import UIKit
 
 class AboutMeViewController: UIViewController {
     //MARK: - IB Outlets
-    @IBOutlet var aboutMeLabel: UILabel!
-    @IBOutlet var meImageView: UIImageView!
-    @IBOutlet var buttonsStackView: UIStackView!
+    @IBOutlet private var aboutMeLabel: UILabel!
+    @IBOutlet private var meImageView: UIImageView!
 
     //MARK: - Public Properties
-    var person: Person!
+    var person: Person?
 
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
@@ -22,10 +21,12 @@ class AboutMeViewController: UIViewController {
 
         updateLabel()
 
-        meImageView.image = UIImage(named: "me")
-        meImageView.layer.cornerRadius = meImageView.frame.height / 2
+        if let person = person {
+            meImageView.image = person.image
+            meImageView.layer.cornerRadius = meImageView.frame.height / 2
+        }
     }
-    
+
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         if let moreInfoVC = segue.destination as? MoreInfoViewController {
@@ -35,7 +36,7 @@ class AboutMeViewController: UIViewController {
 
     //MARK: - Private Methods
     private func updateLabel() {
-        if let aboutMeLabel = aboutMeLabel {
+        if let aboutMeLabel = aboutMeLabel, let person = person {
             aboutMeLabel.text = """
             Hello! My name is \(person.name) \(person.surname).\n
             I'm \(person.age) years old. I live in \(person.country)

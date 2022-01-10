@@ -44,7 +44,7 @@ class LogInViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else{ return }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
 
         for viewController in viewControllers {

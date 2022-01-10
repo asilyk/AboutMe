@@ -5,6 +5,8 @@
 //  Created by Alexander on 08.01.2022.
 //
 
+import UIKit
+
 struct User {
     let userName: String
     let password: String
@@ -21,7 +23,7 @@ struct User {
 }
 
 struct Person {
-    let image: String
+    let image: UIImage?
 
     let name: String
     let surname: String
@@ -37,7 +39,7 @@ struct Person {
 
     static func getPerson() -> Person {
         Person(
-            image: "me",
+            image: UIImage(named: "me"),
             name: "Aleksandr",
             surname: "Ilyk",
             age: "20",
@@ -45,19 +47,23 @@ struct Person {
             country: "Russia",
             city: "Moscow",
             pets: [
-                Pet(name: "Pirog", animal: .dog),
-                Pet(name: "Belyash", animal: .cat)
+                Pet(image: UIImage(named: "dog"), name: "Pirog", animal: .dog),
+                Pet(image: UIImage(named: "cat"), name: "Belyash", animal: .cat)
             ]
         )
     }
 }
 
 struct Pet {
-    enum Animal: String {
-        case dog = "dog"
-        case cat = "cat"
-    }
+    let image: UIImage?
 
     let name: String
     let animal: Animal
+}
+
+extension Pet {
+    enum Animal: String {
+        case dog
+        case cat
+    }
 }

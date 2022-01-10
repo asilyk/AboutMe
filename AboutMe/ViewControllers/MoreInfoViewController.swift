@@ -9,11 +9,11 @@ import UIKit
 
 class MoreInfoViewController: UIViewController {
     //MARK: - Public Properties
-    var person: Person!
+    var person: Person?
 
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-        if let myPetsVC = segue.destination as? MyPetsViewController{
+        if let myPetsVC = segue.destination as? MyPetsViewController, let person = person {
             myPetsVC.pets = person.pets
         }
     }
