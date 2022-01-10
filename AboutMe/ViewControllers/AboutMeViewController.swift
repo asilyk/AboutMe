@@ -19,12 +19,7 @@ class AboutMeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        updateLabel()
-
-        if let person = person {
-            meImageView.image = person.image
-            meImageView.layer.cornerRadius = meImageView.frame.height / 2
-        }
+        setupOutlets()
     }
 
     //MARK: - Navigation
@@ -35,14 +30,24 @@ class AboutMeViewController: UIViewController {
     }
 
     //MARK: - Private Methods
-    private func updateLabel() {
-        if let aboutMeLabel = aboutMeLabel, let person = person {
-            aboutMeLabel.text = """
-            Hello! My name is \(person.name) \(person.surname).\n
-            I'm \(person.age) years old. I live in \(person.country)
-            in the city of \(person.city).\n
-            And I love \(person.hobby).
-            """
-        }
+    private func setupOutlets() {
+        guard let person = person else { return }
+
+        updateImageView(for: person)
+        updateLabel(for: person)
+    }
+
+    private func updateImageView(for person: Person) {
+        meImageView.image = person.image
+        meImageView.layer.cornerRadius = meImageView.frame.height / 2
+    }
+
+    private func updateLabel(for person: Person) {
+        aboutMeLabel.text = """
+        Hello! My name is \(person.name) \(person.surname).\n
+        I'm \(person.age) years old. I live in \(person.country)
+        in the city of \(person.city).\n
+        And I love \(person.hobby).
+        """
     }
 }
