@@ -30,7 +30,7 @@ class MyPetsViewController: UIViewController {
     private func setupOutlets(for pet: Pet?, image imageView: UIImageView, label: UILabel) {
         guard let pet = pet else { return }
 
-        imageView.image = pet.image
+        imageView.image = UIImage(named: pet.image)
         imageView.layer.cornerRadius = imageView.frame.height / 2
         label.text = "My \(pet.animal.rawValue) is named \(pet.name)."
     }

@@ -38,7 +38,7 @@ class AboutMeViewController: UIViewController {
     }
 
     private func updateImageView(for person: Person) {
-        meImageView.image = person.image
+        meImageView.image = UIImage(named: person.image)
         meImageView.layer.cornerRadius = meImageView.frame.height / 2
     }
 
