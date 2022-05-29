@@ -1,4 +1,4 @@
-# AboutMe App
+# AboutMe app
 
 The training project for creating applications using the UIKit and MVC.
 
