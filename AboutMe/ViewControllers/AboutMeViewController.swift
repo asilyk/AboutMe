@@ -38,8 +38,8 @@ class AboutMeViewController: UIViewController {
     }
 
     private func updateImageView(for person: Person) {
-        meImageView.image = UIImage(named: person.image)
-        meImageView.layer.cornerRadius = meImageView.frame.height / 2
+        meImageView.image = UIImage(systemName: person.image)
+        //meImageView.layer.cornerRadius = meImageView.frame.height / 2
     }
 
     private func updateLabel(for person: Person) {

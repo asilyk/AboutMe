@@ -37,16 +37,16 @@ struct Person {
 
     static func getPerson() -> Person {
         Person(
-            image: "me",
+            image: "person.fill",
             name: "Aleksandr",
             surname: "Ilyk",
-            age: "20",
+            age: "21",
             hobby: "programming",
             country: "Russia",
             city: "Moscow",
             pets: [
-                Pet(image: "dog", name: "Pirog", animal: .dog),
-                Pet(image: "cat", name: "Belyash", animal: .cat)
+                Pet(image: "pawprint.fill", name: "Doggy", animal: .dog),
+                Pet(image: "pawprint.fill", name: "Catty", animal: .cat)
             ]
         )
     }
